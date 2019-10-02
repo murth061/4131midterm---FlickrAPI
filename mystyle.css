@@ -13,7 +13,8 @@
 }
 
 copyright{
-  font-size: 2;
+  text-align: center;
+  font-size: 10;
   color: blue;
   text-decoration: underline; 
 }
