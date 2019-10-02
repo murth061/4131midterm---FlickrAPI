@@ -16,7 +16,7 @@
 
 .bottom{
     display: block;
-  border: 2px;
+  border: 2px dashed;
   
   border-color: blue;
 }
