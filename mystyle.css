@@ -1,15 +1,19 @@
 .blueunder {
-  color: blue
-    text-decoration: underline
+  color: blue;
+    text-decoration: underline;
 }
 
 .blue{
-  color: blue
+  color: blue;
+}
+
+.center{
+  display: block;
+  border: 2px dashed rgba(114, 186, 94, 0.35);
 }
 
 copyright{
-  font-size: 2
-  color: blue
-  text-decoration: underline
-    
+  font-size: 2;
+  color: blue;
+  text-decoration: underline; 
 }
