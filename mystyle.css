@@ -10,6 +10,7 @@
 .center{
   display: block;
   border: 2px dashed;
+  
   border-color: blue;
 }
 
