@@ -9,7 +9,8 @@
 
 .center{
   display: block;
-  border: 2px dashed blue;
+  border: 2px dashed;
+  border-color: blue;
 }
 
 copyright{
