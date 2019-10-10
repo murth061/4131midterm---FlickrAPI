@@ -1,28 +1,4 @@
-.blueunder {
-  color: blue;
-    text-decoration: underline;
-}
+.titulo { font-size: 200%
+  color: blue } 
 
-.blue{
-  color: blue;
-}
-
-.center{
-  display: block;
-  border: 2px dashed;
   
-  border-color: blue;
-}
-
-.bottom{
-    display: block;
-  border: 2px dashed;
-  
-  border-color: blue;
-}
-
-copyright{
-  font-size: 10;
-  color: blue;
-  text-decoration: underline; 
-}
