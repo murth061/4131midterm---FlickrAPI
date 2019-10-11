@@ -3,16 +3,21 @@
 <body>
 <head>
   <link rel="stylesheet" href="mystyle.css" type="text/css">
+ <script src="myscripts.js"></script>
+ 
   </head>
+ 
+
+  
  <center><h1>XKCD Password Maker</h1>
   <br style = “line-height:50;”>
   
- <label for="redi">Minimum word length</label>
-     <input type="text" id="redi" min="0" value="255" /> <br>
-     <label for="greeni">Maximum word length</label>
-     <input type="text" id="greeni"  value="255" /><br>
-     <label for="bluei">Max Length</label>
-     <input type="text" id="bluei" value="255" />
+     <label for="min">Minimum word length</label>
+     <input type="text" id="min" min="0" value="255" /> <br>
+     <label for="max">Maximum word length</label>
+     <input type="text" id="max"  value="255" /><br>
+     <label for="length">Max Length</label>
+     <input type="text" id="length" value="255" />
      
      
      <input type="checkbox" id="type" name="group1" value="type">Easy Typing<br />
@@ -21,6 +26,8 @@
        
      <br>
      <button onclick="makePassword();">Make Password</button>
+  
+  <p id="arsenal"></p>
  </center>
        
   </body>
