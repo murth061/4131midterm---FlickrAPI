@@ -5,7 +5,9 @@ function makePassword(){
   var easyType = document.getElementById("type").checked;
   var numberSub = document.getElementById("sub").checked;
   document.body.style.backgroundColor = blue;
-  document.getElementById("arsenal").innerHTML = "WOWOWOWO";
+  document.getElementById("arsenal").innerHTML = max;
+   document.getElementById("arsenal").innerHTML = min;
+   document.getElementById("arsenal").innerHTML = easyType;
   
   
   }
