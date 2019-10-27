@@ -35,8 +35,8 @@ document.getElementById("outputDiv").innerHTML = image;
             $("#submit").click(function (e) {
                 $("#outputDiv").html("");
 
-                /*jQuery AJAX Method*/
-                /*var flickerAPI = "https://api.flickr.com/services/feeds/photos_public.gne?format=json&tags=" + $("#search").val();
+              
+                var flickerAPI = "https://api.flickr.com/services/feeds/photos_public.gne?format=json&tags=" + $("#search").val();
                 $.ajax({
                     url: flickerAPI,
                     dataType: "jsonp", // jsonp
@@ -54,10 +54,10 @@ document.getElementById("outputDiv").innerHTML = image;
                         $("#outputDiv").html("Result: " + status + " " + error + " " + xhr.status + " " + xhr.statusText)
                     }
                 });*/
-                /*End*/
+                
 
-                /*jQuery getJSON Method*/
-                /*var flickerAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+
+                var flickerAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
                 $.getJSON(flickerAPI, {
                     tags: $("#search").val(),
                     tagmode: "any",
@@ -71,8 +71,8 @@ document.getElementById("outputDiv").innerHTML = image;
                     });
                 }).fail(function (xhr, status, error) {
                     alert("Result: " + status + " " + error + " " + xhr.status + " " + xhr.statusText)
-                });*/
-                /*End*/
+                });
+                
             });
         });
     </script>
