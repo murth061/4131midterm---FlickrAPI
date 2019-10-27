@@ -9,14 +9,31 @@
  check = function(textbox) { 
   document.body.style.backgroundColor = "red";
  }
+  
+ JavaScriptFetch = function() {
+var script = document.createElement('script');
+script.src = "https://api.flickr.com/services/feeds/photos_public.gne?format=json&tags=" + document.getElementById("location").value;;
+document.querySelector('head').appendChild(script);
+}
+  
+jsonFlickrFeed = function(data) {
+var image = "";
+data.items.forEach(function (element) {
+image += "<img src=\"" + element.media.m + "\"/>";
+});
+document.getElementById("outputDiv").innerHTML = image;
+}
+  
  </script>
  
  <center> 
-  <div class="a">CuisineFinder</div>
-  <p> This App is built to help you select a cuisine you like, and then pick whether you want to cook it or find it in your city! </p>
+  <div class="a">TravelBuddy</div>
+  <p> This App is built to help you see if you wanna travel to a place!  </p>
   <p>
    <label for="location">Where would you like to go?</label>
    <input id="location" type="text" onchange="check(this)" />
+   <button id="submit" onclick="JavaScriptFetch()">Submit</button>
+   
   
  
 
