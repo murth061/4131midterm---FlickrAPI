@@ -1,28 +1,52 @@
 <html>
-  <head>
-    <title>Flickr JSON</title>
-  </head>
-<body>
-  <script>
-  function jsonFlickrApi(rsp) {
-    window.rsp = rsp;
-    var s = "";
-    // http://farm{id}.static.flickr.com/{server-id}/{id}_{secret}_[mstb].jpg
-    // http://www.flickr.com/photos/{user-id}/{photo-id}
-    s = "total number is: " + rsp.photos.photo.length + "<br/>";
-    
-    for (var i=0; i < rsp.photos.photo.length; i++) {
-      photo = rsp.photos.photo[i];
-      t_url = "http://farm" + photo.farm + ".static.flickr.com/" + 
-        photo.server + "/" + photo.id + "_" + photo.secret + "_" + "t.jpg";
-      p_url = "http://www.flickr.com/photos/" + photo.owner + "/" + photo.id;
-      s +=  '<a href="' + p_url + '">' + '<img alt="'+ photo.title + 
-        '"src="' + t_url + '"/>' + '</a>';
-    }
-    document.writeln(s);
-  }
-  </script>
-  <script src="http://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=65de36fcee21c9d06bedd492b489411e&tags=flower&per_page=50&format=json"></script>
-</body>
+<head>
+    <center><div id = "a"> Welcome to TravelBuddy </div> </center>
+        <p> asdfasdf </p>
+        
+    <div class="container">
+        <div id="content">
+            <input id="search" type="text" placeholder="search text" />
+            <button id="submit" onclick="JavaScriptFetch()">Submit</button>
+            <div id="outputDiv"></div>
+        </div>
+    </div>    
+        
+        
+       
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script>
+        /*JavaScript Method*/
+        function JavaScriptFetch() {
+            var script = document.createElement('script');
+            script.src = "https://api.flickr.com/services/feeds/photos_public.gne?format=json&tags=" + document.getElementById("search").value;;
+            document.querySelector('head').appendChild(script);
+        }
 
+        function jsonFlickrFeed(data) {
+            var image = "";
+            data.items.forEach(function (element) {
+                image += "<img src=\"" + element.media.m + "\"/>";
+            });
+
+            document.getElementById("outputDiv").innerHTML = image;
+        }
+        /*End*/
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#reset").click(function (e) {
+                location.reload();
+            });
+
+            $("#submit").click(function (e) {
+                $("#outputDiv").html("");
+
+               
+            });
+        });
+    </script>
+    
+    
+</body>
 </html>
+
