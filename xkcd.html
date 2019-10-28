@@ -15,7 +15,7 @@
        
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script>
-        /*JavaScript Method*/
+  
         function JavaScriptFetch() {
             var script = document.createElement('script');
             script.src = "https://api.flickr.com/services/feeds/photos_public.gne?format=json&tags=travel," + document.getElementById("search").value;;
@@ -34,9 +34,6 @@
     </script>
     <script type="text/javascript">
         $(document).ready(function () {
-            $("#reset").click(function (e) {
-                location.reload();
-            });
 
             $("#submit").click(function (e) {
                 $("#outputDiv").html("");
