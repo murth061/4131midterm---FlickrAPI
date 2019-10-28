@@ -1,14 +1,15 @@
 <html>
 <head>
     <center><div id = "a"> Welcome to TravelBuddy </div> 
-        <div.id="b"> You can see what people are doing at these places and try and see travel costs! Really! </div>
+        <div.id="b"> You can enter an ip address and see what people are posting around that area!  </div>
     </center>
         
     <div class="container">
         <div id="content">
             <input id="search" type="text" placeholder="search text" />
             <button id="submit" onclick="JavaScriptFetch()">Submit</button>
-            <div id="outputDiv", class = "container"></div>
+            <button id="ip" onclick="getData()">IP Address info</button>
+            <div id="outputDiv"></div>
         </div>
     </div>    
         
@@ -16,7 +17,28 @@
        
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script>
-        /*JavaScript Method*/
+        //Location info
+     function getData() {
+ // set endpoint and your access key
+        var ip = '134.201.250.155'
+        var access_key = "69bb7972f47536b1009160ab3dcd99bc";
+
+// get the API result via jQuery.ajax
+    $.ajax({
+       url: 'http://api.ipstack.com/' + ip + '?access_key=' + access_key,   
+       dataType: 'jsonp',
+       success: function(json) {
+
+        // output the "capital" object inside "location"
+        document.getElementById("outputDiv").innerHTML = json.location.capital;
+        
+    }
+});
+
+           }
+       
+            
+        //Flickr Images
         function JavaScriptFetch() {
             var script = document.createElement('script');
             script.src = "https://api.flickr.com/services/feeds/photos_public.gne?format=json&tags=food," + document.getElementById("search").value;;
@@ -31,7 +53,7 @@
 
             document.getElementById("outputDiv").innerHTML = image;
         }
-        /*End*/
+  
     </script>
     <script type="text/javascript">
         $(document).ready(function () {
