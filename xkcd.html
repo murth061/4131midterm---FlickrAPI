@@ -7,7 +7,7 @@
         <div id="content">
             <input id="search" type="text" placeholder="search text" />
             <button id="submit" onclick="fetchData()">See Photos</button>
-            
+            <div id="line"></div>
             <div id="photos"></div>
         </div>
     </div>    
@@ -24,6 +24,7 @@
             script.src = "https://api.flickr.com/services/feeds/photos_public.gne?format=json&tags=travel," + document.getElementById("search").value;;
             
             document.querySelector('head').appendChild(script);
+            document.querySelector('line').innerHTML = "RESULTS:"
         }
         // to get the photos 
         function jsonFlickrFeed(data) {
@@ -37,7 +38,6 @@
     
     </script> 
     
-    //jquery 
     
     <script type="text/javascript">
         $(document).ready(function () {
