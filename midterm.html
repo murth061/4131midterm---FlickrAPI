@@ -61,9 +61,11 @@
             $("#submit").click(function (e) {
                 // pop up message 
                 $("#photos").html("Loading"); 
-            //second api here using ajax 
+                  
+                  
+            //second api here using ajax ( compares our ip address to get location and compare it to search query ) 
             $.ajax({
-                 url: 'http://api.ipstack.com/134.201.250.155?access_key=69bb7972f47536b1009160ab3dcd99bc',   
+                 url: 'http://api.ipstack.com/107.77.207.40?access_key=69bb7972f47536b1009160ab3dcd99bc',   
                  dataType: 'jsonp',
                  success: function(json) {
 
