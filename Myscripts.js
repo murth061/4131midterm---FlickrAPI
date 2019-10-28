@@ -1,34 +1,38 @@
 
-        /*JavaScript Method*/
-        function JavaScriptFetch() {
-            var script = document.createElement('script');
-            script.src = "https://api.flickr.com/services/feeds/photos_public.gne?format=json&tags=travel," + document.getElementById("search").value;;
-            document.querySelector('head').appendChild(script);
-        }
 
+            
+           // gets the image urls
+        function fetchData() {
+            var script = document.createElement('script');
+            // flickr public api 
+            script.src = "https://api.flickr.com/services/feeds/photos_public.gne?format=json&tags=travel,food," + document.getElementById("search").value;;
+            
+            document.querySelector('head').appendChild(script);
+            document.getElementById('line').innerHTML = "RESULTS:"
+        }
+        // to get the photos 
         function jsonFlickrFeed(data) {
-            var image = "";
+            var image = " ";
             data.items.forEach(function (element) {
                 image += "<img src=\"" + element.media.m + "\"/>";
             });
-
-            document.getElementById("outputDiv").innerHTML = image;
+            // adding the images 
+            document.getElementById("photos").innerHTML = image;
+            
         }
-        /*End*/
-    </script>
+    
+    </script> 
+    
+    
     <script type="text/javascript">
         $(document).ready(function () {
-            $("#reset").click(function (e) {
-                location.reload();
-            });
 
             $("#submit").click(function (e) {
-                $("#outputDiv").html("");
+                $("#photos").html("");
 
                
             });
         });
-
     
 
   
