@@ -3,6 +3,9 @@ alpha {
   font-size: 200%;
 }
 
+hm {
+  background: rgb(25,83,31);
+  background: linear-gradient(90deg, rgba(25,83,31,1) 0%, rgba(219,54,210,1) 36%, rgba(0,169,255,1) 100%);
 
 
 beta { 
