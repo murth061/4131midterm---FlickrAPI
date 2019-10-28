@@ -9,11 +9,10 @@ div.b {
 }
 
 .container {
-            width: 66%;
-            float: left;
-            margin: auto;
-            color: #FFF;
-            font-size: 25px;
+   width: 66%;
+   float: left;
+   color: #AFEEE;
+   font-size: 25px;
         }
   
 
