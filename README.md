@@ -1,2 +1,1 @@
-# csci4131
-CSCI 4131 stuffs 
+This was a midterm project for my CSCI 4131 internet programming class. I used the public Flickr API to have a website where I could search any topic on flickr and the website would display the most recent images that had been uploaded to Flickr. 
